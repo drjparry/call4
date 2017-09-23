@@ -1,0 +1,17 @@
+<div class='top-bar align-middle'>
+  <div class='align-left'>
+    <%= link_to 'Start a campaign', new_campaign_path, class: "header-link" %>
+    <%= link_to 'Discover', root_path, class: "header-link" %>
+  </div>
+  <div class='call-for-header align-center'>
+    CallFor.com
+  </div>
+  <div class="align-right">
+    <% if user_signed_in? %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <a data-open="signInModal" class="header-link">Sign in</a>
+      <a data-open="signUpModal" class="header-link">Sign up</a>
+    <% end %>
+  </div>
+</div>
